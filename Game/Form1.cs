@@ -233,7 +233,7 @@ namespace Game
 
         public void RunHealth()
         {
-            healthTimer.Interval = 5000;
+            healthTimer.Interval = 15000;
             healthTimer.Start();
             healthTimer.Tick += new EventHandler(
                 delegate (object sender2, EventArgs e2)
