@@ -45,6 +45,25 @@ namespace Game
             {
                 btnCar.Top += 20;
             }
+            else if (e.KeyCode == Keys.Escape)
+            {
+
+                timer1.Enabled = false;
+                pictureBox1.Enabled = false;
+                var dialogResult = MessageBox.Show("Continue ?", "Paused", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+
+                switch (dialogResult)
+                {
+                    case DialogResult.Cancel:
+                        Application.Exit();
+                        break;
+                    case DialogResult.OK:
+                        timer1.Enabled = true;
+                        pictureBox1.Enabled = true;
+                        break;
+                }
+
+            }
         }
 
 
