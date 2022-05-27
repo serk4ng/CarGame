@@ -50,6 +50,11 @@ namespace Game
 
                 timer1.Enabled = false;
                 pictureBox1.Enabled = false;
+                healthEatTimer.Enabled = false;
+                healthTimer.Enabled = false;
+                coinEatTimer.Enabled = false;
+                coinTimer.Enabled = false;
+
                 var dialogResult = MessageBox.Show("Continue ?", "Paused", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
 
                 switch (dialogResult)
@@ -60,6 +65,10 @@ namespace Game
                     case DialogResult.OK:
                         timer1.Enabled = true;
                         pictureBox1.Enabled = true;
+                        healthEatTimer.Enabled = true;
+                        healthTimer.Enabled = true;
+                        coinEatTimer.Enabled = true;
+                        coinTimer.Enabled = true;
                         break;
                 }
 
